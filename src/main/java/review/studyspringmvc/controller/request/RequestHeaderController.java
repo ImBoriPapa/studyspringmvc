@@ -24,7 +24,7 @@ public class RequestHeaderController {
                           @RequestHeader MultiValueMap<String, String> headerMap,
                           @RequestHeader("host") String host,
                           @CookieValue(value = "myCookie", required = false) String cookie) {
-        log.info("request ={}", request);
+//        log.info("request ={}", request);
         log.info("response ={}", response);
         log.info("httpMethod ={}", httpMethod);
         log.info("locale ={}", locale);
