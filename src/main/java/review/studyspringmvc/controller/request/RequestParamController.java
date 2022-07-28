@@ -70,7 +70,7 @@ public class RequestParamController {
     @RequestMapping("/request-parameter-v6")
     public String requestParameterV6(
             @RequestParam(required = true,defaultValue = "nothing") String product,
-            @RequestParam(required = false,defaultValue = "nothing") Integer product_code) {
+            @RequestParam(required = false,defaultValue = "-1") Integer product_code) {
 
         log.info("product = {}, product_code ={}", product, product_code);
         return "OK";
