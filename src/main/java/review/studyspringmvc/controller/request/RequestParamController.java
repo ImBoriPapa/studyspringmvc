@@ -2,9 +2,11 @@ package review.studyspringmvc.controller.request;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import review.studyspringmvc.controller.Food;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -83,4 +85,44 @@ public class RequestParamController {
         log.info("product = {}, product_code ={}", paramMap.get("product"), paramMap.get("product_code"));
         return "OK";
     }
+
+    /**
+     * @modelAttribute
+     */
+    @ResponseBody
+    @RequestMapping("/model-Attribute-v1")
+    public String modelAttributeV1(@ModelAttribute Food food) {
+        log.info("foodName={}, price={}",food.getFoodName(),food.getPrice());
+
+        return "OK";
+    }
+
+    @ResponseBody
+    @RequestMapping("/model-Attribute-v2")
+    public String modelAttributeV2(Food food) {
+        log.info("foodName={}, price={}",food.getFoodName(),food.getPrice());
+
+        return "OK";
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
