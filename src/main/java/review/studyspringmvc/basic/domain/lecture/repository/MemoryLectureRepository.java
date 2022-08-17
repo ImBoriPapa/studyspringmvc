@@ -1,7 +1,7 @@
-package review.studyspringmvc.domain.item.repository;
+package review.studyspringmvc.basic.domain.lecture.repository;
 
 import org.springframework.stereotype.Repository;
-import review.studyspringmvc.domain.item.entity.Lecture;
+import review.studyspringmvc.basic.domain.lecture.entity.Lecture;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ public class MemoryLectureRepository implements LectureRepository{
     private static AtomicLong sequence = new AtomicLong();
 
     public Lecture save(Lecture lecture) {
-        lecture.setId(sequence.getAndIncrement());
+        lecture.setId(sequence.incrementAndGet() );
         store.put(lecture.getId(), lecture);
         return lecture;
     }
