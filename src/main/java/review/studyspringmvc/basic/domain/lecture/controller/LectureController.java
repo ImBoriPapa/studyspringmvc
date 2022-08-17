@@ -24,7 +24,7 @@ public class LectureController {
     public String lectures(Model model) {
         List<Lecture> lectures = lectureRepository.findAll();
         model.addAttribute("lectures", lectures);
-        return "/basic/lectures";
+        return "/basic/lecture/lectures";
     }
 
     /**
