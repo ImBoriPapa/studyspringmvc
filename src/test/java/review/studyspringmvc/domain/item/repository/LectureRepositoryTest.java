@@ -1,16 +1,16 @@
 package review.studyspringmvc.domain.item.repository;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import review.studyspringmvc.domain.item.entity.Lecture;
+import review.studyspringmvc.basic.domain.lecture.entity.Lecture;
+import review.studyspringmvc.basic.domain.lecture.repository.LectureRepository;
+import review.studyspringmvc.basic.domain.lecture.repository.MemoryLectureRepository;
 
 import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 
 class LectureRepositoryTest {

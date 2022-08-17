@@ -1,7 +1,7 @@
-package review.studyspringmvc.domain.item.repository;
+package review.studyspringmvc.basic.domain.lecture.repository;
 
 
-import review.studyspringmvc.domain.item.entity.Lecture;
+import review.studyspringmvc.basic.domain.lecture.entity.Lecture;
 
 import java.util.List;
 import java.util.Optional;

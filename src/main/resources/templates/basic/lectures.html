@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link th:href="@{/css/bootstrap.min.css}"
+            href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" style="max-width: 600px">
+    <div class="py-5 text-center">
+        <h2>강의 목록</h2></div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary float-end"
+                    onclick="location.href='addForm.html'"
+                    th:onclick="|location.href='@{/basic/addForm.html}'|"
+                    type="button">
+                강의 등록
+            </button>
+        </div>
+    </div>
+    <hr class="my-4">
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>강의명</th>
+                <th>가격</th>
+                <th>강의번호</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr th:each="lecture : ${lectures}">
+                <td><a href="lecture.html" th:href="@{/basic/lectures/{id}(id=${lecture.id})}" th:text="${lecture.id}">1</a></td>
+                <td><a href="lecture.html" th:href="@{/basic/lectures/{id}(id=${lecture.id})}" th:text="${lecture.lectureName}">테스트 상품1</a></td>
+                <td th:text="${lecture.price}">10000</td>
+                <td th:text="${lecture.numberOfLecture}">10</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div> <!-- /container -->
+</body>
+</html>

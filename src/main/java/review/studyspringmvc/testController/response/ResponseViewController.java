@@ -1,4 +1,4 @@
-package review.studyspringmvc.controller.response;
+package review.studyspringmvc.testController.response;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,4 +1,4 @@
-package review.studyspringmvc.controller.request;
+package review.studyspringmvc.testController.request;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -8,7 +8,7 @@ import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
-import review.studyspringmvc.controller.Student;
+import review.studyspringmvc.testController.Student;
 
 import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;

@@ -1,4 +1,4 @@
-package review.studyspringmvc.controller;
+package review.studyspringmvc.testController;
 
 import lombok.Data;
 
