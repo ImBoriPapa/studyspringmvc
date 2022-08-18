@@ -3,72 +3,75 @@
 <head>
     <meta charset="utf-8">
     <link th:href="@{/css/bootstrap.min.css}"
-            href="../css/bootstrap.min.css" rel="stylesheet">
+          href="../css/bootstrap.min.css" rel="stylesheet">
     <style>
-    .container{
-        max-width: 560px;
-    }
+        .container {
+            max-width: 560px;
+        }
+
     </style>
-    </head>
+</head>
 <body>
-    <div class="container">
+<div class="container">
 
-        <div class="py-5 text-center">
-            <h2>강의 상세</h2>
+    <div class="py-5 text-center">
+        <h2>강의 상세</h2>
+    </div>
+
+    <h2 th:if="${param.status}" th:text="'등록 성공'"></h2>
+
+    <div>
+        <label for="id">강의 ID</label>
+        <input type="text" id="id" name="id" class="form-control"
+               th:value="${lecture.id}"
+               value="1" readonly>
+    </div>
+
+    <div>
+        <label for="lectureName">강의명</label>
+        <input type="text" id="lectureName" name="lectureName" class="form-control"
+               th:value="${lecture.lectureName}"
+               value="강의A" readonly>
+    </div>
+
+    <div>
+        <label for="price">강의 가격</label>
+        <input type="text" id="price" name="price" class="form-control"
+               th:value="${lecture.price}"
+               value="10000" readonly>
+    </div>
+
+    <div>
+        <label for="price">강의 번호</label>
+        <input type="text" id="numberOfLecture" name="numberOfLecture" class="form-control"
+               th:value="${lecture.numberOfLecture}"
+               value="10000" readonly>
+    </div>
+
+    <hr class="my-4">
+
+    <div class="row">
+        <div class="col">
+            <button class="w-100 btn btn-primary btn-lg"
+                    onclick="location.href='editForm.html'"
+                    th:onclick="|location.href='@{/basic/lectures/{lectureId}/edit(lectureId=${lecture.id})}'|"
+                    type="button">
+                강의 수정
+            </button>
         </div>
 
-        <div>
-            <label for="id">강의 ID</label>
-            <input type="text" id="id" name="id" class="form-control"
-            th:value="${lecture.id}"
-                   value="1" readonly>
+        <div class="col">
+            <button class="w-100 btn btn-primary btn-lg"
+                    onclick="location.href='lectures.html'"
+                    th:onclick="|location.href='@{/basic/lectures}'|"
+                    type="button">
+                강의 목록 보기
+            </button>
         </div>
 
-        <div>
-            <label for="lectureName">강의명</label>
-            <input type="text" id="lectureName" name="lectureName" class="form-control"
-                   th:value="${lecture.lectureName}"
-                   value="강의A" readonly>
-        </div>
-
-        <div>
-            <label for="price">강의 가격</label>
-           <input type="text" id="price" name="price" class="form-control"
-                  th:value="${lecture.price}"
-                   value="10000" readonly>
-        </div>
-
-        <div>
-            <label for="price">강의 번호</label>
-            <input type="text" id="numberOfLecture" name="numberOfLecture" class="form-control"
-                   th:value="${lecture.numberOfLecture}"
-                   value="10000" readonly>
-        </div>
-
-        <hr class="my-4">
-
-        <div class="row">
-            <div class="col">
-                <button class="w-100 btn btn-primary btn-lg"
-                        onclick="location.href='editForm.html'"
-                        th:onclick="|location.href='@{/basic/lectures/{lectureId}/edit(lectureId=${lecture.id})}'|"
-                        type="button">
-                    강의 수정
-                </button>
-            </div>
-
-            <div class="col">
-                <button class="w-100 btn btn-primary btn-lg"
-                        onclick="location.href='lectures.html'"
-                        th:onclick="|location.href='@{/basic/lectures}'|"
-                        type="button">
-                    강의 목록 보기
-                </button>
-            </div>
-
-
-        </div>
 
     </div>
+
+</div>
 </body>
 </html>
