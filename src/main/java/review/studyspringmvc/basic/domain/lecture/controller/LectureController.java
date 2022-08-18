@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import review.studyspringmvc.basic.domain.lecture.entity.Lecture;
 import review.studyspringmvc.basic.domain.lecture.repository.LectureRepository;
@@ -27,7 +28,7 @@ public class LectureController {
     public String lectures(Model model) {
         List<Lecture> lectures = lectureService.findAll();
         model.addAttribute("lectures", lectures);
-        return "/basic/lecture/lectures";
+        return "basic/lecture/lectures";
     }
 
     @GetMapping("/{lectureId}")
@@ -36,7 +37,17 @@ public class LectureController {
 
         model.addAttribute("lecture", lecture.get());
 
-        return "/basic/lecture/lecture";
+        return "basic/lecture/lecture";
+    }
+
+    @GetMapping("/add")
+    public String addForm() {
+        return "basic/lecture/addForm";
+    }
+
+    @PostMapping("/add")
+    public String save() {
+        return "redirect:/basic/lectures";
     }
 
     /**
