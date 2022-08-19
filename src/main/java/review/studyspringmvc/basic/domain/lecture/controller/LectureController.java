@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import review.studyspringmvc.basic.domain.lecture.entity.Lecture;
+import review.studyspringmvc.basic.domain.lecture.repository.LectureRepository;
 import review.studyspringmvc.basic.domain.lecture.service.LectureService;
 
 import javax.annotation.PostConstruct;
