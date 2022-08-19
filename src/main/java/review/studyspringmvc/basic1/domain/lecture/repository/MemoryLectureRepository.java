@@ -1,7 +1,7 @@
-package review.studyspringmvc.basic.domain.lecture.repository;
+package review.studyspringmvc.basic1.domain.lecture.repository;
 
 import org.springframework.stereotype.Repository;
-import review.studyspringmvc.basic.domain.lecture.entity.Lecture;
+import review.studyspringmvc.basic1.domain.lecture.entity.Lecture;
 
 import java.util.ArrayList;
 import java.util.List;

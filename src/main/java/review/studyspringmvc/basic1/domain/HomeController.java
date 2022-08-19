@@ -1,4 +1,4 @@
-package review.studyspringmvc.basic.domain;
+package review.studyspringmvc.basic1.domain;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;

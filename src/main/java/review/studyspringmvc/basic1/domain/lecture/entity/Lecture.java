@@ -1,4 +1,4 @@
-package review.studyspringmvc.basic.domain.lecture.entity;
+package review.studyspringmvc.basic1.domain.lecture.entity;
 
 import lombok.Getter;
 import lombok.Setter;

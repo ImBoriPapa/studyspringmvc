@@ -1,9 +1,9 @@
-package review.studyspringmvc.basic.domain.lecture.service;
+package review.studyspringmvc.basic1.domain.lecture.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import review.studyspringmvc.basic.domain.lecture.entity.Lecture;
-import review.studyspringmvc.basic.domain.lecture.repository.LectureRepository;
+import review.studyspringmvc.basic1.domain.lecture.entity.Lecture;
+import review.studyspringmvc.basic1.domain.lecture.repository.LectureRepository;
 
 import java.util.List;
 import java.util.Optional;

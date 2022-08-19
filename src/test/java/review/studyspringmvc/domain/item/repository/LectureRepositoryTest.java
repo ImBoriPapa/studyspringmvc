@@ -3,9 +3,9 @@ package review.studyspringmvc.domain.item.repository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import review.studyspringmvc.basic.domain.lecture.entity.Lecture;
-import review.studyspringmvc.basic.domain.lecture.repository.LectureRepository;
-import review.studyspringmvc.basic.domain.lecture.repository.MemoryLectureRepository;
+import review.studyspringmvc.basic1.domain.lecture.entity.Lecture;
+import review.studyspringmvc.basic1.domain.lecture.repository.LectureRepository;
+import review.studyspringmvc.basic1.domain.lecture.repository.MemoryLectureRepository;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package review.studyspringmvc.basic.domain.lecture.controller;
+package review.studyspringmvc.basic1.domain.lecture.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -7,9 +7,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import review.studyspringmvc.basic.domain.lecture.entity.Lecture;
-import review.studyspringmvc.basic.domain.lecture.repository.LectureRepository;
-import review.studyspringmvc.basic.domain.lecture.service.LectureService;
+import review.studyspringmvc.basic1.domain.lecture.entity.Lecture;
+import review.studyspringmvc.basic1.domain.lecture.service.LectureService;
 
 import javax.annotation.PostConstruct;
 import java.util.List;

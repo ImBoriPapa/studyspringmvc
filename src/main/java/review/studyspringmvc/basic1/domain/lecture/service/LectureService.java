@@ -1,12 +1,12 @@
-package review.studyspringmvc.basic.domain.lecture.repository;
+package review.studyspringmvc.basic1.domain.lecture.service;
 
-
-import review.studyspringmvc.basic.domain.lecture.entity.Lecture;
+import review.studyspringmvc.basic1.domain.lecture.entity.Lecture;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface LectureRepository {
+public interface LectureService {
+
 
     Lecture save(Lecture lecture);
 
@@ -17,6 +17,4 @@ public interface LectureRepository {
     void update(Long id, Lecture updateParam);
 
     void clearStore();
-
-
 }
