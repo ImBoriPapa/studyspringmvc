@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>SpringEL 표현식</h1>
+
+<table>
+    <thead>
+    <th>Object</th>
+    <th>memberName</th>
+    <th>memberRole</th>
+    </thead>
+
+    <tbody>
+    <td>1</td>
+    <td>${member.memberName}</td>
+    <td>${member.memberRole}</td>
+    </tbody>
+
+    <tbody>
+    <td></td>
+    <td th:text="${member.memberName}">2</td>
+    <td th:text="${member.memberRole}">3</td>
+    </tbody>
+
+    <tbody>
+    <td>2</td>
+    <td>${member['memberName']}</td>
+    <td>${member['memberRole']}</td>
+    </tbody>
+
+    <td></td>
+    <td th:text="${member['memberName']}">2</td>
+    <td th:text="${member['memberRole']}">3</td>
+    </tbody>
+
+
+    <tbody>
+    <td>3</td>
+    <td>${member.getMemberName()}</td>
+    <td>${member.getMemberRole()}</td>
+    </tbody>
+
+    <tbody>
+    <td></td>
+    <td th:text="${member.getMemberName()}">2</td>
+    <td th:text="${member.getMemberRole()}">3</td>
+    </tbody>
+</table>
+
+<table>
+    <thead>
+    <th>List</th>
+    <th>memberName</th>
+    <th>memberRole</th>
+    </thead>
+
+    <tbody>
+    <td>1</td>
+    <td>${members[0].memberName}</td>
+    <td>${members[0].memberRole}</td>
+    </tbody>
+
+    <tbody>
+    <td></td>
+    <td th:text="${members[0].memberName}">2</td>
+    <td th:text="${members[0].memberRole}">3</td>
+    </tbody>
+
+    <tbody>
+    <td>2</td>
+    <td>${members[0]['memberName']}</td>
+    <td>${members[0]['memberRole']}</td>
+    </tbody>
+
+    <td></td>
+    <td th:text="${members[0]['memberName']}">2</td>
+    <td th:text="${members[0]['memberRole']}">3</td>
+    </tbody>
+
+
+    <tbody>
+    <td>3</td>
+    <td>${members[0].getMemberName()}</td>
+    <td>${members[0].getMemberRole()}</td>
+    </tbody>
+
+    <tbody>
+    <td></td>
+    <td th:text="${members[0].getMemberName()}">2</td>
+    <td th:text="${members[0].getMemberRole()}">3</td>
+    </tbody>
+</table>
+
+
+<table>
+    <thead>
+    <th>Map</th>
+    <th>memberName</th>
+    <th>memberRole</th>
+    </thead>
+
+    <tbody>
+    <td>1</td>
+    <td>${memberMap['memberA'].memberName}</td>
+    <td>${memberMap['memberA'].memberRole}</td>
+    </tbody>
+
+    <tbody>
+    <td></td>
+    <td th:text="${memberMap['memberA'].memberName}">2</td>
+    <td th:text="${memberMap['memberA'].memberRole}">3</td>
+    </tbody>
+
+    <tbody>
+    <td>2</td>
+    <td>${memberMap['memberA']['memberName']}</td>
+    <td>${memberMap['memberA']['memberRole']}</td>
+    </tbody>
+
+    <td></td>
+    <td th:text="${memberMap['memberA']['memberName']}">2</td>
+    <td th:text="${memberMap['memberA']['memberRole']}">3</td>
+    </tbody>
+
+
+    <tbody>
+    <td>3</td>
+    <td>${memberMap['memberA'].getMemberName()}</td>
+    <td>${memberMap['memberA'].getMemberRole()}</td>
+    </tbody>
+
+    <tbody>
+    <td></td>
+    <td th:text="${memberMap['memberA'].getMemberName()}">2</td>
+    <td th:text="${memberMap['memberA'].getMemberRole()}">3</td>
+    </tbody>
+</table>
+
+<h1>지역 변수 - (th:with)</h1>
+<div th:with="first=${members[0]}">
+    <p>첫 회원의 이름은
+        <span th:text="${first.memberName}"></span>
+    </p>
+</div>
+
+<div th:with="second=${members[1]}">
+    <p>두 번째 회원의 이름은 <span th:text="${second.memberName}"></span></p>
+</div>
+</body>
+</html>
